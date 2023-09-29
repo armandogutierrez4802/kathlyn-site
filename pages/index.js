@@ -1,10 +1,15 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const inter = Inter({ subsets: ['latin'] })
+// Icons
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Home() {
   return (
-    <div>Home Page</div>
+    <div>
+      <div>Home Page</div>
+      <FontAwesomeIcon icon={faCode} />
+    </div>
   )
 }
