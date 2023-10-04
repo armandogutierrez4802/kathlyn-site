@@ -3,10 +3,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
     return (
-        <nav className="navbar">
+        <nav className='flex bg-gray-700'>
             <h3>Kathlyn Gutierrez</h3>
-            <button className="fa-icon-btn">
-                <FontAwesomeIcon icon={faBars} style={{ fontSize: 30, color: 'purple' }} />
+            <button>
+                <FontAwesomeIcon icon={faBars} className='text-3xl' />
             </button>
         </nav>
     )
