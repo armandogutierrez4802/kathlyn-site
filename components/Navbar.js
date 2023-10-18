@@ -1,14 +1,15 @@
 
 import Link from 'next/link';
+import ActiveLink from './ActiveLink';
 
 // Font Awesome Imports
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 //Tailwind UI Imports
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+// import { Fragment } from 'react';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 // function classNames(...classes) {
 //     return classes.filter(Boolean).join(' ')
@@ -29,30 +30,34 @@ export default function Navbar() {
                                 <div className="hidden sm:ml-16 sm:flex sm:space-x-8 md:ml-40 lg:ml-64 xl:ml-80">
                                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
 
-                                    <Link
+                                    <ActiveLink
                                         href="/"
-                                        className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
                                     >
                                         Home
-                                    </Link>
-                                    <Link
+                                    </ActiveLink>
+                                    <ActiveLink
                                         href="/order"
-                                        className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
                                     >
                                         Order
-                                    </Link>
-                                    <Link
+                                    </ActiveLink>
+                                    <ActiveLink
                                         href="/about"
-                                        className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
                                     >
                                         About
-                                    </Link>
-                                    <Link
+                                    </ActiveLink>
+                                    <ActiveLink
                                         href="/faq"
-                                        className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
                                     >
                                         FAQ
-                                    </Link>
+                                    </ActiveLink>
                                 </div>
                             </div>
 
