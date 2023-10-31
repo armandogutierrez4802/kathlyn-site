@@ -1,9 +1,9 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function Order() {
-    return (
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <form>
+  return (
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* <form>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Profile</h2>
@@ -330,7 +330,7 @@ export default function Order() {
           Save
         </button>
       </div>
-    </form>
-        </div>
-    )
+    </form> */}
+    </div>
+  )
 }
