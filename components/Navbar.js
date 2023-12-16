@@ -22,43 +22,51 @@ export default function Navbar() {
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                        <div className="flex h-16 justify-between">
-                            <div className="flex">
-                                <div className="flex flex-shrink-0 items-center">
-                                    <div>Kathlyn Gutierrez</div>
-                                </div>
-                                <div className="hidden sm:ml-16 sm:flex sm:space-x-8 md:ml-40 lg:ml-64 xl:ml-80">
-                                    {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
+                        {/* <div className="flex min-w-[100%] h-16 justify-between"> */}
+                        <div className="flex flex-1 h-16 justify-between">
+                            <div className="flex flex-shrink-0 items-center">
+                                <div>Kathlyn Gutierrez</div>
+                            </div>
+                            {/* <div className="hidden space-x-[20px] sm:ml-16 sm:flex sm:space-x-8 md:ml-40 lg:ml-64 xl:ml-80"> */}
+                            <div className="hidden space-x-[20px] sm:flex pr-4">
+                                {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
 
-                                    <ActiveLink
-                                        href="/"
-                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
-                                    >
-                                        Home
-                                    </ActiveLink>
-                                    <ActiveLink
-                                        href="/order"
-                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
-                                    >
-                                        Order
-                                    </ActiveLink>
-                                    <ActiveLink
-                                        href="/about"
-                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
-                                    >
-                                        About
-                                    </ActiveLink>
-                                    <ActiveLink
-                                        href="/faq"
-                                        className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                                        activeClassName="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-black"
-                                    >
-                                        FAQ
-                                    </ActiveLink>
-                                </div>
+                                <ActiveLink
+                                    href="/"
+                                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                    activeClassName="inline-flex items-center border-b-2 border-yellow-300 px-1 pt-1 text-sm font-medium text-black"
+                                >
+                                    Home
+                                </ActiveLink>
+                                <ActiveLink
+                                    href="/order"
+                                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                    activeClassName="inline-flex items-center border-b-2 border-yellow-300 px-1 pt-1 text-sm font-medium text-black"
+                                >
+                                    Order
+                                </ActiveLink>
+                                <ActiveLink
+                                    href="/about"
+                                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                    activeClassName="inline-flex items-center border-b-2 border-yellow-300 px-1 pt-1 text-sm font-medium text-black"
+                                >
+                                    About
+                                </ActiveLink>
+                                <ActiveLink
+                                    href="/faq"
+                                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                    activeClassName="inline-flex items-center border-b-2 border-yellow-300 px-1 pt-1 text-sm font-medium text-black"
+                                >
+                                    FAQ
+                                </ActiveLink>
+                            </div>
+                            <div className="hidden sm:ml-6 sm:flex sm:items-center">
+                                <button
+                                    type="button"
+                                    className="py-1 px-2 border-2 border-yellow-300"
+                                >
+                                    Request a Quote
+                                </button>
                             </div>
 
                             <div className="-mr-2 flex items-center sm:hidden">
@@ -83,7 +91,7 @@ export default function Navbar() {
                             <Disclosure.Button
                                 as="a"
                                 href="#"
-                                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
+                                className="block border-l-4 border-yellow-300 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
                             >
                                 Home
                             </Disclosure.Button>
