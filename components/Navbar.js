@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import ActiveLink from './ActiveLink';
+import { useRouter } from 'next/router';
 
 // Font Awesome Imports
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +18,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 
 export default function Navbar() {
+    const router = useRouter();
+
     return (
         <Disclosure as="nav" className="bg-white shadow">
             {({ open }) => (
@@ -90,29 +93,29 @@ export default function Navbar() {
                             {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
                             <Disclosure.Button
                                 as="a"
-                                href="#"
-                                className="block border-l-4 border-yellow-300 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
+                                href="/"
+                                className={`block border-l-4 ${router.pathname == "/" ? "border-yellow-300" : "border-transparent"} py-2 pl-3 pr-4 text-base font-medium text-gray-700`}
                             >
                                 Home
                             </Disclosure.Button>
                             <Disclosure.Button
                                 as="a"
-                                href="#"
-                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                                href="/order"
+                                className={`block border-l-4 ${router.pathname == "/order" ? "border-yellow-300" : "border-transparent"} py-2 pl-3 pr-4 text-base font-medium text-gray-700 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700`}
                             >
                                 Order
                             </Disclosure.Button>
                             <Disclosure.Button
                                 as="a"
-                                href="#"
-                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                                href="/about"
+                                className={`block border-l-4 ${router.pathname == "/about" ? "border-yellow-300" : "border-transparent"} py-2 pl-3 pr-4 text-base font-medium text-gray-700 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700`}
                             >
                                 About
                             </Disclosure.Button>
                             <Disclosure.Button
                                 as="a"
-                                href="#"
-                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                                href="/faq"
+                                className={`block border-l-4 ${router.pathname == "/faq" ? "border-yellow-300" : "border-transparent"} py-2 pl-3 pr-4 text-base font-medium text-gray-700 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700`}
                             >
                                 FAQ
                             </Disclosure.Button>
