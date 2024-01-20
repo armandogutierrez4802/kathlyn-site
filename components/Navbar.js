@@ -1,6 +1,7 @@
 
-import Link from 'next/link';
+// import Link from 'next/link';
 import ActiveLink from './ActiveLink';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // Font Awesome Imports
@@ -27,8 +28,8 @@ export default function Navbar() {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         {/* <div className="flex min-w-[100%] h-16 justify-between"> */}
                         <div className="flex flex-1 h-16 justify-between">
-                            <div className="flex flex-shrink-0 items-center">
-                                <div>Kathlyn Gutierrez</div>
+                            <div className="font-bold flex flex-shrink-0 items-center">
+                                <h1>Kathlyn Gutierrez</h1>
                             </div>
                             {/* <div className="hidden space-x-[20px] sm:ml-16 sm:flex sm:space-x-8 md:ml-40 lg:ml-64 xl:ml-80"> */}
                             <div className="hidden space-x-[20px] sm:flex pr-4">
@@ -64,12 +65,14 @@ export default function Navbar() {
                                 </ActiveLink>
                             </div>
                             <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                                <button
-                                    type="button"
-                                    className="py-1 px-2 border-2 border-yellow-300"
-                                >
-                                    Request a Quote
-                                </button>
+                                <Link href="/order">
+                                    <button
+                                        type="button"
+                                        className="py-1 px-2 border-2 border-yellow-300"
+                                    >
+                                        Request a Quote
+                                    </button>
+                                </Link>
                             </div>
 
                             <div className="-mr-2 flex items-center sm:hidden">
